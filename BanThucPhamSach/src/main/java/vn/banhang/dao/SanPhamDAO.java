@@ -377,10 +377,59 @@ public class SanPhamDAO {
 		}
 		return list;
 	}
+	public void themSanPham(String tenSP,int Gia,int soLuong,String phanLoai,
+			String doTuoiKho,int giamGia,String moTa, String ngay, String hinhAnh) {
+
+		String sql= "INSERT INTO SanPham VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		try {
+			int a=getDemSoLuongSanPham()+1;
+			
+			String maSP = "SP0"+String.valueOf(a);
+//			Mở kết nối database
+			conn= new DBConnect().getConnection();
+//			Ném câu query vào SQL server
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, maSP);
+			ps.setString(2, tenSP);
+			ps.setInt(3, Gia);
+			ps.setInt(4, soLuong);
+			ps.setString(5, phanLoai);
+			ps.setString(6, doTuoiKho);
+			ps.setInt(7, 5);
+			ps.setInt(8, 5);
+			ps.setInt(9, giamGia);
+			ps.setString(10, moTa);
+			ps.setString(11, ngay);
+			ps.setString(12, hinhAnh);
+
+//			Chạy câu query và nhân lại kết quả
+			ps.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	public void xoaSanPham(String maSP) {
+
+		String sql= "delete SanPham where MaSP= ?";
+		try {
+//			Mở kết nối database
+			conn= new DBConnect().getConnection();
+//			Ném câu query vào SQL server
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, maSP);
+
+//			Chạy câu query và nhân lại kết quả
+			ps.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
 //	Test dữ liệu
 //	public static void main(String[] args) {
 //		SanPhamDAO pd=new SanPhamDAO();
-//		List<SanPhamModel> list=pd.getTimKiemSanPham("C");
-//		System.out.println(list);
+//		pd.themSanPham("2", 10, 10, "LSP005","Đồ khô", 10, null, null, null);
+//		SanPhamModel x= pd.getOneSanPham("SP025");
+//		List<SanPhamModel> list=pd.getAllSanPham();
+//		System.out.println(x);
 //	}
 }

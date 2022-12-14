@@ -1,7 +1,6 @@
 package vn.banhang.controller.admin;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,34 +9,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import vn.banhang.dao.LoaiSanPhamDAO;
 import vn.banhang.dao.SanPhamDAO;
-import vn.banhang.model.SanPhamModel;
 
 /**
- * Servlet implementation class ListSanPhamController
+ * Servlet implementation class DeleteSPController
  */
-@WebServlet("/danh-sach-san-pham-admin")
-public class ListSanPhamController extends HttpServlet {
+@WebServlet("/xoa-san-pham-admin")
+public class DeleteSPController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
 //		Thiết lập tiếng việt
 		resp.setContentType("text/html");
 		resp.setCharacterEncoding("UTF-8");
 		req.setCharacterEncoding("UTF-8");
 		
-		String phanLoai=req.getParameter("phanLoai");
-		SanPhamDAO productDao = new SanPhamDAO();
-		List<SanPhamModel> listSanPhamTheoLoai = productDao.getSanPhamTheoLoai(phanLoai);
-		List<SanPhamModel> listAllSanPham = productDao.getAllSanPham();
-		if(phanLoai.equals("all"))
-			req.setAttribute("sanPhamTheoLoai", listAllSanPham);
-		else
-			req.setAttribute("sanPhamTheoLoai", listSanPhamTheoLoai);
+		String maSP= req.getParameter("maSP");
+		SanPhamDAO spDAO=new SanPhamDAO();
+		spDAO.xoaSanPham(maSP);
 		
-//		Chuyen huong trang trả về trang cần trả
-		RequestDispatcher rq= req.getRequestDispatcher("/viewsAdmin/list_sanpham.jsp");
+		
+		RequestDispatcher rq= req.getRequestDispatcher("danh-sach-san-pham-admin?phanLoai=all");
 		rq.forward(req, resp);
 	}
 

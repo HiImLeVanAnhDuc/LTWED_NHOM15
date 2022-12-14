@@ -45,47 +45,39 @@
 
         <div class="content">
             <div class="container-fluid">
+            
                 <div class="row">
+                
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Danh sách </h4>
-                                <p class="category">Thông tin sản phẩm</p>
-                                <div class="text-right" >
-								    <a href="them-san-pham-admin">  
-								    	<button type="submit" class="btn btn-info btn-fill btn-wd">Thêm sản phẩm</button>
-								    </a> 
-								</div>
+                                <p class="category">Loại sản phẩm</p>   
                             </div>
+                           <!--  <div class="text-right" style="margin-right: 50px;">
+						        <a href="them-loai-san-pham-admin?maLSP=&&tenLSP="><button type="submit" class="btn btn-info btn-fill btn-wd">Thêm Loại</button></a> 
+						    </div> -->
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-striped">
                                     <thead>
-                                        <th>STT</th>
-                                    	<th>Mã SP</th>
-                                    	<th>Tên SP</th>
-                                    	<th>Mã Phân Loại</th>
-                                    	<th></th>
-                                    	<th></th>
+                                        <th></th>
+                                    	<th>Email</th>
+                                    	<th>Họ và tên</th>
+                                    	<th>Thời gian</th>
+                                    	<th>Ý kiến<th>
                                     </thead>
                                     <tbody>
                                     <c:set var="STT" value="${0}"></c:set>
-                                    <c:forEach items="${sanPhamTheoLoai}" var="sp" >
+                                    <c:forEach items="${allYKien}" var="sp" >
                                     	<tr>
                                     		<c:set var="STT" value="${STT+1}"/>
                                         	<td>${STT}</td>
-                                        	<td>${sp.getMaSP()}</td>
-                                        	<td>${sp.getTenSP()}</td>
-                                        	<td>${sp.getPhanLoai()}</td>
-                                        	<td><a href="thong-tin-san-pham?maSP=${sp.getMaSP()}">Xem chi tiết</a></td>
-                                        	<td>
-                                        		<div class="text-center" >
-												    <a href="xoa-san-pham-admin?maSP=${sp.getMaSP()}">  
-												    	<button type="submit" class="btn btn-info btn-fill btn-wd">Xóa</button>
-												    </a> 
-												</div>
-                                        	</td>
+                                        	<td>${sp.getEmail()}</td>
+                                        	<td>${sp.getHoTen()}</td>
+                                        	<td>${sp.getThoiGian()}</td>
+                                        	<td>${sp.getYKien()}</td>
                                         </tr>
-                                    </c:forEach>
+                                    </c:forEach>         
                                     </tbody>
                                 </table>
 
@@ -95,13 +87,6 @@
                 </div>
             </div>
         </div>
-
-
-<div class="text-center" >
-    <a href="loai-san-pham-admin"> 
-    	<button type="submit" class="btn btn-info btn-fill btn-wd">Loại sản phẩm</button>
-    </a> 
-</div>
 
 <!-- footer -->  
   <%@ include file="/views/footer_admin.jsp" %>

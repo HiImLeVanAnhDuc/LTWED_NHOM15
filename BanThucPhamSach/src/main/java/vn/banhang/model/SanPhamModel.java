@@ -34,6 +34,11 @@ public class SanPhamModel {
 		HinhAnh = hinhAnh;
 		GiaDaGiam= giaSP -( giaSP * giamGia/100);
 	}
+	
+	public SanPhamModel(String maSP) {
+		super();
+		MaSP = maSP;
+	}
 	public String getMaSP() {
 		return MaSP;
 	}

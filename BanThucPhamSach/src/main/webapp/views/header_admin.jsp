@@ -29,25 +29,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="danh-sach-san-pham-admin">
+                    <a href="danh-sach-san-pham-admin?phanLoai=all">
                         <i class="ti-view-list-alt"></i>
                         <p>Sản phẩm</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#.jsp">
+                    <a href="loai-san-pham-admin">
                         <i class="ti-text"></i>
                         <p>Loại sản phẩm</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#.jsp">
+                    <a href="danh-sach-gop-y-admin">
                         <i class="ti-pencil-alt2"></i>
                         <p>Thông tin đánh giá</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#.jsp">
+                    <a href="danh-sach-hoa-don-admin">
                         <i class="ti-map"></i>
                         <p>Danh sách hóa đơn</p>
                     </a>

@@ -52,9 +52,9 @@
                                 <h4 class="title">Danh sách </h4>
                                 <p class="category">Thông tin sản phẩm</p>
                                 <div class="text-right" >
-								    <a href="them-san-pham-admin">  
+								    <!-- <a href="them-san-pham-admin">  
 								    	<button type="submit" class="btn btn-info btn-fill btn-wd">Thêm sản phẩm</button>
-								    </a> 
+								    </a>  -->
 								</div>
                             </div>
                             <div class="content table-responsive table-full-width">
@@ -62,28 +62,19 @@
                                     <thead>
                                         <th>STT</th>
                                     	<th>Mã SP</th>
-                                    	<th>Tên SP</th>
-                                    	<th>Mã Phân Loại</th>
-                                    	<th></th>
-                                    	<th></th>
+                                    	<th>Mã SP</th>
+                                    	<th>Số Lượng</th>
+                                    	
                                     </thead>
                                     <tbody>
                                     <c:set var="STT" value="${0}"></c:set>
-                                    <c:forEach items="${sanPhamTheoLoai}" var="sp" >
+                                    <c:forEach items="${inforBill}" var="sp" >
                                     	<tr>
                                     		<c:set var="STT" value="${STT+1}"/>
                                         	<td>${STT}</td>
-                                        	<td>${sp.getMaSP()}</td>
-                                        	<td>${sp.getTenSP()}</td>
-                                        	<td>${sp.getPhanLoai()}</td>
-                                        	<td><a href="thong-tin-san-pham?maSP=${sp.getMaSP()}">Xem chi tiết</a></td>
-                                        	<td>
-                                        		<div class="text-center" >
-												    <a href="xoa-san-pham-admin?maSP=${sp.getMaSP()}">  
-												    	<button type="submit" class="btn btn-info btn-fill btn-wd">Xóa</button>
-												    </a> 
-												</div>
-                                        	</td>
+                                        	<td>${sp.getMaDon().getMaDon()}</td>
+                                        	<td>${sp.getMaSP(). getMaSP()}</td>
+                                        	<td>${sp.getSoLuong()}</td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
@@ -98,8 +89,8 @@
 
 
 <div class="text-center" >
-    <a href="loai-san-pham-admin"> 
-    	<button type="submit" class="btn btn-info btn-fill btn-wd">Loại sản phẩm</button>
+    <a href="danh-sach-hoa-don-admin"> 
+    	<button type="submit" class="btn btn-info btn-fill btn-wd">Quay lại</button>
     </a> 
 </div>
 

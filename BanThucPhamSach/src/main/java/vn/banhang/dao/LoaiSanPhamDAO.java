@@ -39,4 +39,37 @@ public class LoaiSanPhamDAO {
 		}
 		return list;
 	}
+	public void themLoaiSanPham(String maSP, String tenSP) {
+
+		String sql= "INSERT INTO LoaiSanPham VALUES (?, ?)";
+		try {
+//			Mở kết nối database
+			conn= new DBConnect().getConnection();
+//			Ném câu query vào SQL server
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, maSP);
+			ps.setString(2, tenSP);
+
+//			Chạy câu query và nhân lại kết quả
+			ps.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	public void xoaLoaiSanPham(String maSP) {
+
+		String sql= "delete LoaiSanPham where MaLoai= ?";
+		try {
+//			Mở kết nối database
+			conn= new DBConnect().getConnection();
+//			Ném câu query vào SQL server
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, maSP);
+
+//			Chạy câu query và nhân lại kết quả
+			ps.executeUpdate();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
 }

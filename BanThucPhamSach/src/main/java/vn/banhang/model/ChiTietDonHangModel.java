@@ -9,7 +9,6 @@ public class ChiTietDonHangModel {
 		super();
 	}
 	
-	
 	public ChiTietDonHangModel(DonHangModel maDon, SanPhamModel maSP, double soLuong, float giaTien) {
 		super();
 		MaDon = maDon;
@@ -17,8 +16,12 @@ public class ChiTietDonHangModel {
 		SoLuong = soLuong;
 		GiaTien = giaTien;
 	}
-
-
+	public ChiTietDonHangModel(DonHangModel maDon, SanPhamModel maSP, double soLuong) {
+		super();
+		MaDon = maDon;
+		MaSP = maSP;
+		SoLuong = soLuong;
+	}
 
 	public float getGiaTien() {
 		return GiaTien;
@@ -28,8 +31,6 @@ public class ChiTietDonHangModel {
 	public void setGiaTien(float giaTien) {
 		this.GiaTien = giaTien;
 	}
-
-
 	public DonHangModel getMaDon() {
 		return MaDon;
 	}
