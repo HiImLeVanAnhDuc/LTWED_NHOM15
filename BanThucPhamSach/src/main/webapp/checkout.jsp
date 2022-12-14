@@ -60,30 +60,30 @@
             </div>
             <div class="checkout__form">
                 <h4>Thông tin thanh toán</h4>
-                <form action="#">
+                <form action="dat-hang" method="post">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <div class="checkout__input">
                                 <p>Họ và tên<span>*</span></p>
-                                <input type="text" placeholder="Họ tên của bạn">
+                                <input type="text" name="hoten" placeholder="Họ tên của bạn">
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Số điện thoại<span>*</span></p>
-                                        <input type="text" placeholder="Số điện thoại của bạn">
+                                        <input type="text" name="sdt" placeholder="Số điện thoại của bạn">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Địa chỉ email<span>*</span></p>
-                                        <input type="text" placeholder="20110634@student.hcmute.edu.vn">
+                                        <input type="text" name="email" placeholder="20110634@student.hcmute.edu.vn">
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__input">
                                 <p>Địa chỉ<span>*</span></p>
-                                <input type="text" placeholder="VD:1 Đ. Võ Văn Ngân, Linh Chiểu, Thành Phố Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam">
+                                <input type="text" name="diachi" placeholder="VD:1 Đ. Võ Văn Ngân, Linh Chiểu, Thành Phố Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam">
                             </div>
                             <!-- <div class="checkout__input">
                                 <p>Address<span>*</span></p>
@@ -138,7 +138,7 @@
                             </div> -->
                             <div class="checkout__input">
                                 <p>Ghi chú đơn hàng (tuỳ chọn)<span></span></p>
-                                <input type="text"
+                                <input type="text" name="ghichu"
                                     placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn.">
                             </div>
                         </div>

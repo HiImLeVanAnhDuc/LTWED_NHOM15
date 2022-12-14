@@ -41,8 +41,8 @@
                     <div class="footer__widget">
                         <!-- <h6>Join Our Newsletter Now</h6> -->
                         <p>Nhập Email để biết thêm thông tin khi có khuyến mãi</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter của bạn">
+                        <form action="gui-mail-khuyen-mai" method="post">
+                            <input type="text" placeholder="Enter của bạn" name="email">
                             <button type="submit" class="site-btn">Xác nhận</button>
                         </form>
                         <div class="footer__widget__social">

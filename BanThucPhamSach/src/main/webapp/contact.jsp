@@ -115,16 +115,16 @@
                     </div>
                 </div>
             </div>
-            <form action="#">
+            <form action="dong-gop-y-kien">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Tên của bạn">
+                        <input type="text" name="hoten" placeholder="Tên của bạn">
                     </div>
                     <div class="col-lg-6 col-md-6">
-                        <input type="text" placeholder="Email của bạn">
+                        <input type="email" name="email" placeholder="Email của bạn">
                     </div>
                     <div class="col-lg-12 text-center">
-                        <textarea placeholder="Lời nhắn"></textarea>
+                        <textarea name="ykien" placeholder="Lời nhắn"></textarea>
                         <button type="submit" class="site-btn">Gửi</button>
                     </div>
                 </div>
