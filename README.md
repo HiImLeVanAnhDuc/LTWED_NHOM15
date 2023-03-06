@@ -1,17 +1,15 @@
 
-# LTWED_NHOM15
-
-Hiện tại project chưa hoàn thành
-
 # Tên đề tài :Xây dựng web bán rau củ quả
           
 # Thành viên tham gia
 
-Lê Văn Anh Đức 20110634
+Lê Văn Anh Đức         20110634
 
-Lại Văn Qúy    20110708
+Trần Thế Vỹ            20110752
 
-Lê Đình Bảo	   20110613
+Đỗ Nguyễn Tấn Linh	   20110669
+
+Châu Thuận Phát        20110157
 
 # Nội dung chính
 - Viết web quản lí bán rau củ
